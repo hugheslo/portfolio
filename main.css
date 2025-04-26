@@ -235,14 +235,14 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
-  display: none; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.9); 
+  display: none; 
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensures it appears above everything */
+  z-index: 1000; 
 }
 
-/* Game iframe to take up most of the screen */
+
 #gameFrame {
   width: 90%;
   height: 90%;
@@ -287,21 +287,21 @@ h4 {
   position: fixed;
   top: 290px;
   right: 175px;
-  width: 100px; /* adjust to your liking */
+  width: 100px; 
   height: 100px;
-  opacity: 0; /* hidden by default */
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
-  z-index: 1001; /* above most stuff, but below overlay if needed */
+  z-index: 1001; 
 }
 
 .easter-egg img {
   width: 100%;
   height: auto;
-  filter: brightness(0) invert(1); /* makes outline white on dark bg */
+  filter: brightness(0) invert(1); /
 }
 
 .easter-egg:hover {
-  opacity: 0.15; /* faintly visible on hover */
+  opacity: 0.15; 
   cursor: pointer;
 }
 .gaming-section {
@@ -334,7 +334,7 @@ h4 {
 }
 @media (max-width: 768px) {
   .easter-egg {
-    top: 80px; /* <-- move it down more (was 20px) */
+    top: 80px; 
     right: 20px;
     width: 60px;
     height: 60px;
@@ -378,10 +378,10 @@ h4 {
     padding: 8px 16px;
   }
   .close-btn {
-    font-size: 14px; /* Smaller font size */
-    padding: 6px 10px; /* Smaller padding */
-    top: 10px;  /* Adjusted position */
-    right: 10px; /* Adjusted position */
+    font-size: 14px; 
+    padding: 6px 10px; 
+    top: 10px;  
+    right: 10px; 
   }
 
   h1 {
@@ -426,10 +426,10 @@ h4 {
     font-size: 1rem;
   }
   .close-btn {
-    font-size: 20px; /* Smaller font size */
-    padding: 6px 10px; /* Smaller padding */
-    top: 10px;  /* Adjusted position */
-    right: 10px; /* Adjusted position */
+    font-size: 20px;
+    padding: 6px 10px; 
+    top: 10px; 
+    right: 10px; 
   }
 
   .gaming-images img {

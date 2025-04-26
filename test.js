@@ -24,33 +24,42 @@ function togglProjects() {
     if (isHidden) projectsText.style.display = 'block';
 }
 
+
 let controllerTimeout;
 
 function toggleGaming() {
     const gamingSection = document.getElementById('gamingSection');
     const controller = document.querySelector('.easter-egg');
-    const isMobileOrTablet = window.innerWidth <= 1024; // Adjust breakpoint if needed
+    const isMobileOrTablet = window.innerWidth <= 1024;
 
-    // Toggle gaming section visibility
-    gamingSection.style.display = (gamingSection.style.display === 'block') ? 'none' : 'block';
+    
+    const isHidden = gamingSection.style.display === 'none' || !gamingSection.style.display;
+
+    hideAllSections(); 
+
+    if (isHidden) {
+        
+        gamingSection.style.display = 'block';
+    }
 
     if (isMobileOrTablet) {
         if (controllerTimeout) clearTimeout(controllerTimeout);
 
         controller.style.display = 'block';
         controller.style.transition = 'none';
-        controller.style.opacity = 0.15; // 15% visible
-        controller.style.pointerEvents = 'auto'; // Make sure it is clickable
+        controller.style.opacity = 0.15;
+        controller.style.pointerEvents = 'auto';
 
         void controller.offsetWidth; // reflow
 
         controllerTimeout = setTimeout(() => {
             controller.style.transition = 'opacity 0.5s ease';
-            controller.style.opacity = 0; // Fade out to invisible
-            // But do NOT set display:none, leave it clickable
+            controller.style.opacity = 0;
         }, 2000);
     }
 }
+
+
 
 // function toggleGaming() {
 //     const isHidden = gamingSection.style.display === 'none' || !gamingSection.style.display;
@@ -70,7 +79,7 @@ const games = {
 function openGame(gameKey) {
     if (games[gameKey]) {
         document.getElementById('gameOverlay').style.display = 'flex';
-        document.getElementById('gameFrame').src = games[gameKey]; // Load the game URL
+        document.getElementById('gameFrame').src = games[gameKey];
     } else {
         alert("Game not found!");
     }
@@ -78,7 +87,7 @@ function openGame(gameKey) {
 
 function closeGame() {
     document.getElementById('gameOverlay').style.display = 'none';
-    document.getElementById('gameFrame').src = ""; // Stop the game when closing
+    document.getElementById('gameFrame').src = ""; 
 }
 
 
@@ -96,11 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (i < text.length) {
             typedText.textContent += text.charAt(i);
             i++;
-            setTimeout(typeText, 100); // Adjust the speed here
+            setTimeout(typeText, 100);
         }
     }
 
-    // Start typing after the page loads
+   
     typeText();
     
 });
