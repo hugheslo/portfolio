@@ -334,7 +334,7 @@ h4 {
 }
 @media (max-width: 768px) {
   .easter-egg {
-    top: 20px;  /* move to top */
+    top: 80px; /* <-- move it down more (was 20px) */
     right: 20px;
     width: 60px;
     height: 60px;
@@ -377,6 +377,12 @@ h4 {
     font-size: 16px;
     padding: 8px 16px;
   }
+  .close-btn {
+    font-size: 14px; /* Smaller font size */
+    padding: 6px 10px; /* Smaller padding */
+    top: 10px;  /* Adjusted position */
+    right: 10px; /* Adjusted position */
+  }
 
   h1 {
     font-size: 2rem;
@@ -392,7 +398,7 @@ h4 {
 }
 @media (min-width: 769px) and (max-width: 1024px) {
   .easter-egg {
-    top: 30px;
+    top: 75px;
     right: 30px;
     width: 70px;
     height: 70px;
@@ -418,6 +424,12 @@ h4 {
 
   .gaming-section p {
     font-size: 1rem;
+  }
+  .close-btn {
+    font-size: 20px; /* Smaller font size */
+    padding: 6px 10px; /* Smaller padding */
+    top: 10px;  /* Adjusted position */
+    right: 10px; /* Adjusted position */
   }
 
   .gaming-images img {
