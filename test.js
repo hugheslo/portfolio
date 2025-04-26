@@ -23,7 +23,6 @@ function togglProjects() {
     hideAllSections();
     if (isHidden) projectsText.style.display = 'block';
 }
-let controllerTimeout;
 
 let controllerTimeout;
 
