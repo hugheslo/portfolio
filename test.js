@@ -25,30 +25,37 @@ function togglProjects() {
 }
 let controllerTimeout;
 
+let controllerTimeout;
+
 function toggleGaming() {
     const gamingSection = document.getElementById('gamingSection');
     const controller = document.querySelector('.easter-egg');
     const isMobileOrTablet = window.innerWidth <= 1024; // Adjust breakpoint if needed
 
+    // Toggle gaming section visibility
     gamingSection.style.display = (gamingSection.style.display === 'block') ? 'none' : 'block';
 
     if (isMobileOrTablet) {
-        // On mobile/tablet: show controller briefly
-        controller.style.display = 'block';
-        controller.style.opacity = 1;
-
+        // Reset any hiding/fade if it was already running
         if (controllerTimeout) clearTimeout(controllerTimeout);
 
+        controller.style.display = 'block';
+        controller.style.transition = 'none'; // Cancel any ongoing transition immediately
+        controller.style.opacity = 0.15; // Start with 15% visibility right away
+
+        // Force reflow to re-trigger animation
+        void controller.offsetWidth;
+
+        // Now start fadeout after 2 seconds
         controllerTimeout = setTimeout(() => {
             controller.style.transition = 'opacity 0.5s ease';
             controller.style.opacity = 0;
-            setTimeout(() => {
+            controllerTimeout = setTimeout(() => {
                 controller.style.display = 'none'; 
-            }, 500); // After fade out
-        }, 2000); // Visible for 2 seconds
+            }, 500); // Wait for fade to finish before hiding
+        }, 2000); // Wait 2 seconds before starting fade out
     } else {
-        // On desktop: controller stays visible
-       
+        // On desktop: controller stays whatever normal behavior you want (you left it empty)
     }
 }
 
