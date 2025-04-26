@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan's Portfolio</title>
+    <script src="test.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        
+            
+        
+            <div class="name">
+              <h1 id="typedText"></h1>
+              <h2>Junior Software Developer</h2>
+            </div>
+            <h3>
+              <span class="clickable" onclick="toggleAboutMe()">About Me</span> | 
+              <span class="clickable" onclick="togglProjects()">Projects</span> | 
+              <span class="clickable" onclick="openResume()">Resume</span>
+            </h3>
+         
+        
+        <div class="about-me-text" id="aboutMeText">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-me-title">About Me</h2>
+                    <p>
+                        My passion for building things began in 7th grade during a group project where we designed and made t-shirts. 
+                        That experience sparked a drive that’s stayed with me ever since. I started working at 14, earlier than most 
+                        of my friends. Throughout high school, I explored different roles and even balanced two jobs while managing 
+                        school — which taught me time management, responsibility, and adaptability.
+                    </p>
+                    <p>
+                        I’ve always known I wanted to pursue tech, but it wasn’t until my senior year, during a web design course, 
+                        that everything clicked. That experience opened my eyes to the creative and problem-solving side of technology, 
+                        and I’ve been hooked ever since.
+                    </p>
+                    <p>
+                        I’m passionate about collaborating with others to create meaningful solutions. Whether coding, debugging, or 
+                        brainstorming ideas with a team, I’m excited by the challenge and opportunity to learn. I thrive in environments 
+                        that push me to think critically and help me grow as a developer.
+                    </p>
+                    <p>
+                        I’m excited about the endless possibilities in tech and the chance to continue learning, creating, and evolving in this field.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/senior-picture.jpg" alt="Logan's Senior Picture">
+                </div>
+            </div>
+        </div>
+        <div class="projects" id="projectsText">
+            <h3>Tic Tac Toe</h3>
+            <p>This is a simple Tic Tac Toe game against the computer. <br> It was a great project for learning how to use Math.random() to generate the computer's moves randomly..</p>
+            <button class="play-game-btn" onclick="openGame('ticTacToe')">Play Tic Tac Toe</button>
+            <div class ="skillset">
+                <br>
+                <img src="skills/icons8-html-5.svg" alt="">
+                <img src="skills/icons8-css.svg" alt="">
+                <img src="skills/icons8-javascript.svg" alt="">
+                <img src="skills/icons8-vs-code.svg" alt="">
+
+            </div>
+           
+            <h3>Rock Paper Scissors</h3>
+            <p>This is a simple rock-paper-scissors game against the computer. <br>
+                It was fun learning how to use a grid to create winning combinations and check if the player's or computer's move matched one</p>
+            <button class="play-game-btn" onclick="openGame('rockPaperScissors')">Play Rock Paper Scissors</button>
+            <div class ="skillset">
+                <br>
+                <img src="skills/icons8-html-5.svg" alt="">
+                <img src="skills/icons8-css.svg" alt="">
+                <img src="skills/icons8-javascript.svg" alt="">
+                <img src="skills/icons8-vs-code.svg" alt="">
+
+            </div>
+
+
+
+            <h3>Skill Stream</h3>
+            <p>Final capstone for <a href="https://www.techelevator.com/" class="tech-elevator">Tech Elevator</a> is a classroom management app where teachers can create courses, assignments, and grade student work. 
+                <br> Students can join courses, complete tasks, and view their grades.
+                <br> 
+                <br> Known Bugs: Calendar events don't work, and students can submit multiple homework assignments.
+            </p>
+            <br>
+            <h3>** currently under deployment backend does not work **</h3>
+            <button class="play-game-btn" onclick="openGame('skillStream')">View Skill Stream</button>
+            <div class ="skillset">
+                <br>
+                <img src="skills/icons8-html-5.svg" alt="">
+                <img src="skills/icons8-css.svg" alt="">
+                <img src="skills/icons8-javascript.svg" alt="">
+                <img src="skills/icons8-java.svg" alt="">
+                <img src="skills/icons8-postgresql.svg" alt="">
+                <img src="skills/icons8-intellij-idea.svg" alt="">
+                <img src="skills/icons8-vs-code.svg" alt="">
+
+            </div>
+            
+        </div>
+        
+        
+        <!-- Game Overlay -->
+        <div id="gameOverlay">
+            <button class="close-btn" onclick="closeGame()">✖</button>
+            <iframe id="gameFrame" src="" frameborder="0"></iframe>
+        </div>
+        <div class="easter-egg" onclick="toggleGaming()">
+            <img src="images/game-controller-outline.svg" alt="Game Controller">
+          </div>
+          
+          <div class="gaming-section" id="gamingSection">
+            <h2>Gaming Mode Activated 🎮</h2>
+            <p>I grew up playing games with family and friends, starting on the PlayStation 2 with titles like Guitar Hero, Ratchet & Clank, and Sly Cooper. Later, I got my own Xbox, where my passion for gaming really took off. I especially enjoy FPS, horror, and co-op puzzle games. These days, I mostly game on PC!
+                <br>Here are some of my favorite games:
+                <div class="gaming-images">
+                    <img src="covers/blackops2.jpg" alt="">
+                    <img src="covers/It_Takes_Two_cover_art.png" alt="">
+                    <img src="covers/Outlast_cover.jpg" alt="">
+                </div>
+                
+
+            </p>
+            <!-- Add whatever you want here! -->
+          </div>
+        
+        <div class="item7">
+            <a href="https://github.com/hugheslo" target="_blank" class ="icon github"></a>
+
+
+            <a href="https://www.linkedin.com/in/loganahughes/" target="_blank" class="icon linkedin"></a>
+
+
+            <a href="#" class="icon gmail" onclick="openEmail()"></a>
+              
+           
+       
+      </div>
+      
+
+
+     
+
+
+    
+</body>
+</html>

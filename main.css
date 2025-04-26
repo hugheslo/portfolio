@@ -1,0 +1,445 @@
+body {
+  background: linear-gradient(135deg, #0e0ed3, rgb(172, 83, 245));
+  color: #f4f4fc;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+/* html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0e0ed3, rgb(172, 83, 245));
+} */
+
+.container {
+  text-align: center;
+  position: relative;
+  
+  
+  padding: 20px; /* Optional: gives breathing room */
+}
+
+.about-me-text {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #f5f5fa;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  max-width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-me-title {
+  -webkit-text-fill-color: #f5f5fa;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 50%;
+
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.about-text p,
+.projects p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.projects {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #f5f5fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+  height: 300px; 
+  overflow-y: auto;
+  max-width: 100%; 
+}
+.projects h3 {
+  -webkit-text-fill-color: #f5f5fa;
+}
+.projects::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 3.2rem;
+  background: linear-gradient(135deg, #d4b3ff, #bc67f5);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #bfaaff, #b772f7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 0.5rem;
+}
+h3{
+  background: linear-gradient(135deg, #bfaaff, #b772f7);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+h4 {
+  font-size: 1.5rem;
+  color: #3a2081;
+  margin-bottom: 1rem;
+}
+
+
+
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #bfaaff, #b772f7);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Specific masks for each platform */
+.icon.linkedin {
+  -webkit-mask-image: url('images/icons8-linkedin.svg');
+  mask-image: url('images/icons8-linkedin.svg');
+}
+
+.icon.github {
+  -webkit-mask-image: url('images/icons8-github.svg');
+  mask-image: url('images/icons8-github.svg');
+}
+ 
+.icon.gmail {
+  -webkit-mask-image: url('images/icons8-gmail-logo.svg');
+  mask-image: url('images/icons8-gmail-logo.svg');
+  transform: scale(1.20); /* scale it up a bit */
+
+}
+.icon.gmail:hover {
+  transform: scale(1.3); /* scale it up a bit */
+
+}
+.roles p {
+  color: #eec8ed;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.testcode{
+  color:#120348 ;
+  color:#3a2081 ;
+  color:#2e2c9a ;
+  color:#eec8ed ;
+  color:#e7e4f9 ;
+}
+
+.item7 {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+}
+
+.item7 img {
+  width: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.item7 img:hover {
+  transform: scale(1.1);
+}
+.projects {
+ height: 250px;
+}
+#gameOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it appears above everything */
+}
+
+/* Game iframe to take up most of the screen */
+#gameFrame {
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.close-btn:hover {
+  background: darkred;
+}
+
+/* Play Game Button */
+.play-game-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.play-game-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5f72be, #9b23ea);
+}
+
+.easter-egg {
+  position: fixed;
+  top: 290px;
+  right: 175px;
+  width: 100px; /* adjust to your liking */
+  height: 100px;
+  opacity: 0; /* hidden by default */
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1001; /* above most stuff, but below overlay if needed */
+}
+
+.easter-egg img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1); /* makes outline white on dark bg */
+}
+
+.easter-egg:hover {
+  opacity: 0.15; /* faintly visible on hover */
+  cursor: pointer;
+}
+.gaming-section {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 60%;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+.gaming-section h2, p {
+  -webkit-text-fill-color: #f5f5fa;
+
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tech-elevator{
+  text-decoration: none;
+  font-weight: bold;
+}
+.gaming-images img{
+  height: 400px;
+  width: 350px;
+}
+@media (max-width: 768px) {
+  .easter-egg {
+    top: 20px;  /* move to top */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .about-text {
+    max-width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .about-image img {
+    max-width: 70%;
+  }
+
+  .gaming-section {
+    padding: 1rem;
+  }
+
+  .gaming-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .gaming-section p {
+    font-size: 0.9rem;
+  }
+
+  .gaming-images img {
+    width: 80px;
+    height: auto;
+    margin: 0 5px;
+  }
+
+  .play-game-btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .easter-egg {
+    top: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    max-width: 60%;
+  }
+
+  .gaming-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .gaming-section p {
+    font-size: 1rem;
+  }
+
+  .gaming-images img {
+    width: 100px;
+    height: auto;
+    margin: 0 8px;
+  }
+
+  .play-game-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
