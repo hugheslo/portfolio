@@ -23,12 +23,40 @@ function togglProjects() {
     hideAllSections();
     if (isHidden) projectsText.style.display = 'block';
 }
+let controllerTimeout;
 
 function toggleGaming() {
-    const isHidden = gamingSection.style.display === 'none' || !gamingSection.style.display;
-    hideAllSections();
-    if (isHidden) gamingSection.style.display = 'block';
+    const gamingSection = document.getElementById('gamingSection');
+    const controller = document.querySelector('.easter-egg');
+    const isMobileOrTablet = window.innerWidth <= 1024; // Adjust breakpoint if needed
+
+    gamingSection.style.display = (gamingSection.style.display === 'block') ? 'none' : 'block';
+
+    if (isMobileOrTablet) {
+        // On mobile/tablet: show controller briefly
+        controller.style.display = 'block';
+        controller.style.opacity = 1;
+
+        if (controllerTimeout) clearTimeout(controllerTimeout);
+
+        controllerTimeout = setTimeout(() => {
+            controller.style.transition = 'opacity 0.5s ease';
+            controller.style.opacity = 0;
+            setTimeout(() => {
+                controller.style.display = 'none'; 
+            }, 500); // After fade out
+        }, 2000); // Visible for 2 seconds
+    } else {
+        // On desktop: controller stays visible
+       
+    }
 }
+
+// function toggleGaming() {
+//     const isHidden = gamingSection.style.display === 'none' || !gamingSection.style.display;
+//     hideAllSections();
+//     if (isHidden) gamingSection.style.display = 'block';
+// }
 
 
 
