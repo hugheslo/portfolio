@@ -35,26 +35,20 @@ function toggleGaming() {
     gamingSection.style.display = (gamingSection.style.display === 'block') ? 'none' : 'block';
 
     if (isMobileOrTablet) {
-        // Reset any hiding/fade if it was already running
         if (controllerTimeout) clearTimeout(controllerTimeout);
 
         controller.style.display = 'block';
-        controller.style.transition = 'none'; // Cancel any ongoing transition immediately
-        controller.style.opacity = 0.15; // Start with 15% visibility right away
+        controller.style.transition = 'none';
+        controller.style.opacity = 0.15; // 15% visible
+        controller.style.pointerEvents = 'auto'; // Make sure it is clickable
 
-        // Force reflow to re-trigger animation
-        void controller.offsetWidth;
+        void controller.offsetWidth; // reflow
 
-        // Now start fadeout after 2 seconds
         controllerTimeout = setTimeout(() => {
             controller.style.transition = 'opacity 0.5s ease';
-            controller.style.opacity = 0;
-            controllerTimeout = setTimeout(() => {
-                controller.style.display = 'none'; 
-            }, 500); // Wait for fade to finish before hiding
-        }, 2000); // Wait 2 seconds before starting fade out
-    } else {
-        // On desktop: controller stays whatever normal behavior you want (you left it empty)
+            controller.style.opacity = 0; // Fade out to invisible
+            // But do NOT set display:none, leave it clickable
+        }, 2000);
     }
 }
 
